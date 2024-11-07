@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Sujon Islam official">
+  <meta name="keywords" content="sujon0xpi">
+  <meta name="author" content="sujon0xpi">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/bd5YXKC/IMG-20240607-161556-584.jpg" />
+  <meta property="og:title" content="Hello, my name is Sujon. This is my official website." />
+  <meta property="og:description" content="Hello, my name is Sujon. This is my official website." />
+  <meta property="og:image" content="https://i.ibb.co/Dpjy0x8/IMG-20240608-165027.jpg" />
+  <meta name="robots" content="index,follow">
+  	<style>
+  	* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            width: 100%;
+            font-size: 14px;
+            background: #2d0036;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            
+        }
+        .container {
+            position: relative;
+            background-color: #231E39;
+            width: 220px;
+            height: 220px;
+            padding: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 60px 5px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            transition: width 0.4s, height 0.4s, border-radius 0.4s;
+        }
+        .expanded {
+            width: 340px;
+            height: 805px;
+            border-radius: 4px;
+        }
+        @keyframes animateProfilePic {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .img-container {
+            width: 170px;
+            height: 170px;
+            min-height: 170px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 40px 5px rgba(0, 0, 0, 0.2);
+            border: 5px solid #000000; 
+            animation: animateProfilePic 1s ease-in-out; 
+        }
+        .img-container img {
+            width: 100%;
+            max-width: 100%;
+        }
+        .full-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+        .role,
+        .description {
+            font-size: 1em;
+            letter-spacing: 0.5px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .role {
+            text-transform: uppercase;
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #ffbe44;
+        }
+        #auto-typing {
+            margin-bottom: 5px; 
+        }
+        .social-container {
+            position: absolute;
+            top: 40px;
+            left: -40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .social-container button {
+            border: none;
+            outline: none;
+            color: #eee;
+            background: none;
+            width: 20px;
+            height: 40px;
+            font-size: 1.7em;
+            margin-bottom: 16px;
+            cursor: pointer;
+            transition: transform 0.4s;
+        }
+        .expanded .social-container button {
+            transform: translateX(60px);
+            transition-delay: 0.3s;
+        }
+        .expanded .social-container button:nth-child(2) {
+            transition-delay: 0.5s;
+        }
+        .expanded .social-container button:nth-child(3) {
+            transition-delay: 0.7s;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .skill {
+            margin-bottom: 10px;
+        }
+        .skill-label {
+            font-weight: bold;
+        }
+        .progress-bar {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            height: 20px;
+            width: 300px;
+        }
+        .progress-fill {
+            background-color: #4CAF50;
+            border-radius: 5px;
+            height: 100%;
+        }
+        .progress-label {
+            color: #4CAF50;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .star {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            opacity: 0;
+            animation: twinkle 1s infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1); opacity: 1; }
+        }
+        .comet {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            width: 2px;
+            height: 2px;
+            animation: comet 3s infinite linear;
+        }
+        @keyframes comet {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+</style>
+    <title>Sujon403x||official</title>
+</head>
+<body>
+    <div class="container" onclick="toggleProfile()">
+        <div class="img-container">
+            <img src="https://i.ibb.co/bd5YXKC/IMG-20240607-161556-584.jpg" alt="Photo profile">
+        </div>
+        <p class="full-name">Sujon Islam</p>
+        <p class="role">Web & App Developer</p>
+        <div id="auto-typing"></div>
+        <h1>My Skill Percentage</h1>
+        <br>
+        <div class="skill">
+            <span class="skill-label">JAVASCRIPT:</span>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 25%;"></div>
+            </div>
+            <span class="progress-label">25%</span>
+        </div>
+        <div class="skill">
+            <span class="skill-label">PHP:</span>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 30%;"></div>
+            </div>
+            <span class="progress-label">30%</span>
+        </div>
+        <div class="skill">
+            <span class="skill-label">CSS:</span>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 32%;"></div>
+            </div>
+            <span class="progress-label">32%</span>
+        </div>
+        <div class="skill">
+            <span class="skill-label">HTML:</span>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 35%;"></div>
+            </div>
+            <span class="progress-label">35%</span>
+        </div>
+        <div class="social-container">
+            <button><a href="https://github.com/sujon0xpi" target="_blank"><i class="fab fa-github"></i></a></button>
+            <button><a href="https://t.me/sujon0xpi" target="_blank"><i class="fab fa-telegram"></i></a></button>
+            <button><a href="https://x.com/sujon0xpi" target="_blank"><i class="fab fa-twitter"></i></a></button>
+            
+        </div>
+    </div>
+    <div id="stars"></div>
+    <div id="comets"></div>
+    <script>
+
+        const text = "Hey there! I'm Sujon, a skilled app and web developer, as well as a cyber security expert. Let me transform your digital vision into reality while ensuring top-notch protection for your online assets.";
+        const delay = 100; 
+
+        function autoType(element, text, delay) {
+            let index = 0;
+            (function type() {
+                if (index < text.length) {
+                    element.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(type, delay);
+                }
+            })();
+        }
+        const autoTypingElement = document.getElementById("auto-typing");
+        
+        function toggleProfile() {
+            const container = document.querySelector('.container');
+            container.classList.toggle('expanded');
+        }
+        
+      
+        function createStars() {
+            const starContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = `${Math.random() * window.innerWidth}px`;
+            star.style.top = `${Math.random() * window.innerHeight}px`;
+            star.style.width = `${Math.random() * 2 + 1}px`;
+            star.style.height = star.style.width;
+            star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            starContainer.appendChild(star);
+            }
+            }
+            
+          
+            function createComets() {
+            const cometContainer = document.getElementById('comets');
+            for (let i = 0; i < 5; i++) {
+            const comet = document.createElement('div');
+            comet.classList.add('comet');
+            comet.style.left = `${Math.random() * window.innerWidth}px`;
+            comet.style.top = `${Math.random() * window.innerHeight}px`;
+            comet.style.width = `${Math.random() * 5 + 2}px`;
+            comet.style.height = comet.style.width;
+            comet.style.animationDuration = `${Math.random() * 5 + 3}s`;
+            comet.style.animationDelay = `${Math.random() * 5}s`;
+            cometContainer.appendChild(comet);
+            }
+            }
+            
+            window.onload = function() {
+            createStars();
+            createComets();
+            autoType(autoTypingElement, text, delay);
+            setTimeout(function() {
+            alert('প্রোফাইল পিকচারে ক্লিক করুন আরো তথ্য দেখার জন্য!');
+            }, 3000);
+            };
+            
+
+            </script>
+            </body>
+            </html>
+            
